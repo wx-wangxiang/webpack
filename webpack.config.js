@@ -11,9 +11,27 @@ module.exports = {
 		path: BUILD_PATH,
 		filename: 'build.js'
 	},
+	module: {
+		loaders: [
+			{
+				test: /\.css$/,
+				loaders: ['style', 'css'],
+				include: APP_PATH
+			},{
+				test: /\.(png|jpg)$/,
+				loader: 'url?limit=40000'
+			}
+		]
+	},
 	plugins: [
 		new HtmlwebpackPlugin({
 			title: 'webpack is awesome'
 		})
-	]
+	],
+	devServer: {
+		historyApiFallback: true,
+		hot: true,
+		inline: true,
+		progress: true
+	}
 }

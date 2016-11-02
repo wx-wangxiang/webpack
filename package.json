@@ -1,15 +1,21 @@
 {
-  "name": "webpack1",
+  "name": "webpack",
   "version": "1.0.0",
   "description": "this is a webpack demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --hot --inline"
   },
   "author": "wangxiang",
   "license": "ISC",
   "devDependencies": {
-    "html-webpack-plugin": "^2.22.0",
-    "webpack": "^1.13.2"
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
   }
 }
